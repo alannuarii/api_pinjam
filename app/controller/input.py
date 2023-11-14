@@ -15,7 +15,7 @@ class Input:
             pinjam = 0
             bayar = nilai
 
-        self.insert_data(tanggal, nama, pinjam, bayar)
+        self.insert_data(tanggal, nama, int(pinjam), int(bayar))
 
     def insert_data(self, tanggal, nama, pinjam, bayar):
         query = f"INSERT INTO data (tanggal, nama, pinjam, bayar) VALUES (%s, %s, %s, %s)"
