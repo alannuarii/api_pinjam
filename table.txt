@@ -1,0 +1,21 @@
+CREATE TABLE bms
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    tanggal DATE NOT NULL,
+    id_bms INT NOT NULL,
+    voltage FLOAT NOT NULL,
+    temperature FLOAT NOT NULL,
+    capacity FLOAT NOT NULL,
+    rul FLOAT NOT NULL,
+    PRIMARY KEY (id)
+)
+
+CREATE TABLE data
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    tanggal DATE NOT NULL,
+    nama VARCHAR(20) NOT NULL,
+    pinjam INT,
+    bayar INT,
+    PRIMARY KEY (id)
+);
