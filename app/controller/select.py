@@ -13,3 +13,9 @@ class Select:
         value = []
         result = connection(query, 'select', value)
         return result
+    
+    def get_all_data(self):
+        query = f"SELECT * FROM data"
+        value = []
+        result = connection(query, 'select', value)
+        return result

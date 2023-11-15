@@ -45,3 +45,17 @@ def get_data():
     except Exception as e:
         error_response = {"message": "Terjadi kesalahan", "error": str(e)}
         return jsonify(error_response), 500
+    
+
+@app.route('/get-all-data')
+def get_all_data():
+    try:
+        obj_select = Select()
+        result = obj_select.get_all_data()
+
+        response = {"message": "Sukses", "data": result}
+        return jsonify(response), 200
+
+    except Exception as e:
+        error_response = {"message": "Terjadi kesalahan", "error": str(e)}
+        return jsonify(error_response), 500
